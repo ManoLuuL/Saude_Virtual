@@ -1,3 +1,12 @@
+<%-- 
+    Document   : Identificacao
+    Created on : 25 de set. de 2021, 19:28:38
+    Author     : T-Gamer
+--%>
+
+<%@page import="util.Escolaridade"%>
+<%@page import="util.Sexo"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <form>
+                <form action="Servidentifica">
                     <div class="form-group">
                         <div class="form-row" style="padding: 3px;">
                             <div class="col"><label style="font-size: 20px;"><strong>Dados Pessoais:</strong></label><input class="form-control form-control-sm" type="text" placeholder="NOME COMPLETO" name="txtnome" style="width: 500px;" required=""></div>
@@ -63,11 +72,16 @@
                                 </select></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Sexo:</label><select class="custom-select custom-select-sm" name="sexo" required="" style="width: 150px;margin: 5px;">
-                                    <option value="MASCULINO">MASCULINO</option>
-                                    <option value="FEMININO">FEMININO</option>
-                                    <option value="OUTRO">OUTRO</option>
-                                    <option value="" selected=""></option>
+                            <div class="col"><label>Sexo:</label>
+                                <select class="custom-select custom-select-sm" name="sexo" required="" style="width: 150px;margin: 5px;">
+                                    <%
+                                        Sexo genero = new Sexo();
+                                        String valor="";
+                                        for (int i=0; i < genero.sexos.size(); i++){
+                                            valor = genero.sexos.get(i);
+                                    %>
+                                    <option value="<%= valor%>"><%= valor%></option>
+                                    <%} %>
                                 </select></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">
@@ -78,7 +92,8 @@
                             <div class="col"></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Cor:</label><select class="custom-select custom-select-sm" name="cor" required="" style="width: 150px;margin: 5px;">
+                            <div class="col"><label>Cor:</label>
+                                <select class="custom-select custom-select-sm" name="cor" required="" style="width: 150px;margin: 5px;">
                                     <option value="BRANCO">BRANCO</option>
                                     <option value="PARDO">PARDO</option>
                                     <option value="NEGRO">NEGRO</option>
@@ -95,15 +110,16 @@
                             <div class="col"></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Escolaridade:&nbsp;</label><select class="custom-select custom-select-sm" style="width: 250px;" name="slescola" required="">
-                                    <option value="ANALFABETO">ANALFABETO</option>
-                                    <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
-                                    <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
-                                    <option value="ENSINO MÉDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
-                                    <option value="ENSINO MÉDIO COMPLETO">ENSINO MÉDIO COMPLETO</option>
-                                    <option value="SUPERIOR INCOMLETO">SUPERIOR INCOMLETO</option>
-                                    <option value="SUPERIOR COMLETO">SUPERIOR COMLETO</option>
-                                    <option value="" selected=""></option>
+                            <div class="col"><label>Escolaridade:&nbsp;</label>
+                                <select class="custom-select custom-select-sm" style="width: 250px;" name="slescola" required="">
+                                    <%
+                                         Escolaridade estudos = new Escolaridade();
+                                         String escola = "";
+                                        for (int i=0; i < estudos.estudo.size(); i++){
+                                            escola = estudos.estudo.get(i);
+                                    %>
+                                    <option value="<%= escola%>"><%= escola%></option>
+                                    <%} %>
                                 </select></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">

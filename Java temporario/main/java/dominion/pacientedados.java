@@ -13,4 +13,10 @@ public class pacientedados {
     String nome;
     String cpf;
     String rg;
+    String nascimento;
+    String peso;
+    String altura;
+    String cidade;
+    String estado;
+    String porfisao;
 }
