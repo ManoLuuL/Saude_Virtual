@@ -1,0 +1,10 @@
+util\Escolaridade.class
+dominion\FichaIdentificacao.class
+util\Sexo.class
+dominion\Pacientecadastro.class
+com\mycompany\saudevirtual\resources\JavaEE8Resource.class
+dominion\Dentistacadastro.class
+com\mycompany\saudevirtual\JAXRSConfiguration.class
+controles\Servidentifica.class
+util\Graduacao.class
+util\validacpf.class
