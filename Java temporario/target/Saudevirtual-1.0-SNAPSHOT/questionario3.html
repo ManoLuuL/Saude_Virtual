@@ -6,158 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Trabalho 2</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
-        <div class="container"><a class="navbar-brand" href="index.html">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-2">
+<body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
+        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="index.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgb(0,0,0);font-size: 15px;">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;">Second Item</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;">Dropdown </a>
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Contato</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
                     </li>
-                </ul><span class="navbar-text actions"> <a class="login" href="#" style="font-size: 15px;">Login</a><a class="btn btn-light action-button" role="button" href="cadastro.html" style="color: var(--gray-dark);background: rgba(86,198,158,0.81);font-size: 15px;">Cadastrar-se</a></span>
+                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="login.html" style="color: rgb(0,0,0);background: rgba(86,198,158,0.81);font-size: 15px;">Login</a></span>
             </div>
         </div>
     </nav>
-    <div class="container" style="padding: 9px;">
-        <h1 class="border rounded" style="text-align: center;font-size: 30px;padding: 16px;background: rgba(152,149,150,0.2);">QUESTIONÁRIO<br>DE SAÚDE DA CRIANÇA E DO ADULTO<br></h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;">
-                            <div class="col"><label class="col-form-label"><strong>4-&nbsp;EXAME FÍSICO</strong></label></div>
+    <section class="border rounded border-dark shadow-lg" style="margin-right: 30px;margin-left: 30px;background: #ffffff;margin-top: 10px;margin-bottom: 10px;">
+        <div class="container" style="padding: 9px;">
+            <h1 class="border rounded" style="text-align: center;font-size: 30px;padding: 16px;background: rgba(152,149,150,0.2);">QUESTIONÁRIO DE SAÚDE: <br>CRIANÇA E ADULTO<br></h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;">
+                                <div class="col"><label class="col-form-label"><strong>4-&nbsp;EXAME FÍSICO</strong></label></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
+                                <div class="col"><label>1-&nbsp;&nbsp;Lábios</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2" name="labnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" name="labioalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>2-&nbsp;&nbsp;Mucosa Jugal</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3" name="mucosanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4" name="mucosaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>3-&nbsp;&nbsp;Língua</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5" name="linguanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6" name="linguaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>4-&nbsp;&nbsp;Soalho da boca</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7" name="bocanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8" name="soalhoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
+                                <div class="col"><label>5-&nbsp;&nbsp;Palato duro</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-9" name="palatonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-10" name="palatoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>6-&nbsp;&nbsp;Garganta</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-11" name="gargantanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-12" name="gargantaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>7-&nbsp;&nbsp;Palato mole</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13" name="palmolenormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14" name="palmolealterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>8- Mucosa Alveolar</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-15" name="alveolarnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-16" name="alveolaralterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
+                                <div class="col"><label>9- Gengivas</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-17" name="gengivanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18" name="gengivasalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>10- Glândulas Salivares</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19" name="glandulanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20" name="glandulasalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>11- Linfonodos</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21" name="linfonodosnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-22" name="linfonodosalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>12- ATM</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-29" name="atmnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-30" name="atmalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
+                                <div class="col"><label>13- Músculos Mastigadores</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-25" name="musculonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-26" name="musculoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"><label>14- Oclusão</label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-27" name="oclusaonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-28" name="oclusaoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
+                                </div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 10px;">
+                                <div class="col"><label>Alterações encontradas:</label><textarea class="form-control form-control-sm" rows="6" name="alteracao"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 0px;padding-bottom: 13px;">
+                                <div class="col"><label>Pressão Arterial</label><input class="form-control form-control-sm" type="text" style="margin: 5PX;width: 150px;" name="pressaomin" placeholder="Mínima em mmHG"><input class="form-control form-control-sm" type="text" style="margin: 5PX;width: 150px;" placeholder="Máxima em mmHG" name="pressaomax"></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Diagnóstico presuntivo:<br></label><textarea class="form-control form-control-sm" name="diagpresu" rows="4"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Exames complementares:<br></label><textarea class="form-control form-control-sm" name="examecomp" rows="4"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Diagnóstico definitivo:<br></label><textarea class="form-control form-control-sm" name="diagdef" rows="4"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Tratamento/Proservação:<br></label><textarea class="form-control form-control-sm" name="tratamento" rows="4"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Plano de Tratamento:<br></label><textarea class="form-control form-control-sm" name="planotratamento" rows="4"></textarea></div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 7px;">
+                                <div class="col">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-32" name="atendimentourg"><label class="form-check-label" for="formCheck-23">Atendimento de Urgência (Estágio Sup. em Clínica Odontológica Integrada –<strong> URGÊNCIA</strong>)<br></label></div>
+                                </div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;">
+                                <div class="col"><label>Medicação<br></label>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-33" name="simmedicacao"><label class="form-check-label" for="formCheck-31">SIM</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-34" name="naomedicacao"><label class="form-check-label" for="formCheck-24">NÃO</label></div><input class="form-control form-control-sm" type="text" name="medicacao" placeholder="SE SIM QUAL?" style="width: 300PX;">
+                                </div>
+                            </div>
+                            <div class="form-row" style="padding: 3px;padding-top: 12px;">
+                                <div class="col"><button class="btn btn-primary" type="submit">Enviar</button></div>
+                            </div>
                         </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
-                            <div class="col"><label>1-&nbsp;&nbsp;Lábios</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2" name="labnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" name="labioalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>2-&nbsp;&nbsp;Mucosa Jugal</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3" name="mucosanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4" name="mucosaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>3-&nbsp;&nbsp;Língua</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5" name="linguanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6" name="linguaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>4-&nbsp;&nbsp;Soalho da boca</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7" name="bocanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8" name="soalhoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
-                            <div class="col"><label>5-&nbsp;&nbsp;Palato duro</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-9" name="palatonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-10" name="palatoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>6-&nbsp;&nbsp;Garganta</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-11" name="gargantanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-12" name="gargantaalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>7-&nbsp;&nbsp;Palato mole</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13" name="palmolenormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14" name="palmolealterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>8- Mucosa Alveolar</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-15" name="alveolarnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-16" name="alveolaralterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
-                            <div class="col"><label>9- Gengivas</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-17" name="gengivanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18" name="gengivasalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>10- Glândulas Salivares</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19" name="glandulanormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20" name="glandulasalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>11- Linfonodos</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21" name="linfonodosnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-22" name="linfonodosalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>12- ATM</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-29" name="atmnormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-30" name="atmalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;padding-bottom: 9px;padding-left: 18px;">
-                            <div class="col"><label>13- Músculos Mastigadores</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-25" name="musculonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-26" name="musculoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"><label>14- Oclusão</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-27" name="oclusaonormal"><label class="form-check-label" for="formCheck-2">NORMAL</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-28" name="oclusaoalterado"><label class="form-check-label" for="formCheck-1">ALTERADO</label></div>
-                            </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 10px;">
-                            <div class="col"><label>Alterações encontradas:</label><textarea class="form-control form-control-sm" rows="6" name="alteracao"></textarea></div>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <div class="form-row" style="padding: 3px;padding-top: 0px;padding-bottom: 13px;">
-                            <div class="col"><label>Pressão Arterial</label><input class="form-control form-control-sm" type="text" style="margin: 5PX;width: 150px;" name="pressaomin" placeholder="Mínima em mmHG"><input class="form-control form-control-sm" type="text" style="margin: 5PX;width: 150px;" placeholder="Máxima em mmHG" name="pressaomax"></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Diagnóstico presuntivo:<br></label><textarea class="form-control form-control-sm" name="diagpresu" rows="4"></textarea></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Exames complementares:<br></label><textarea class="form-control form-control-sm" name="examecomp" rows="4"></textarea></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Diagnóstico definitivo:<br></label><textarea class="form-control form-control-sm" name="diagdef" rows="4"></textarea></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Tratamento/Proservação:<br></label><textarea class="form-control form-control-sm" name="tratamento" rows="4"></textarea></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Plano de Tratamento:<br></label><textarea class="form-control form-control-sm" name="planotratamento" rows="4"></textarea></div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;padding-top: 7px;">
-                            <div class="col">
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-23" name="atendimentourg"><label class="form-check-label" for="formCheck-23">Atendimento de Urgência (Estágio Sup. em Clínica Odontológica Integrada –<strong> URGÊNCIA</strong>)<br></label></div>
-                            </div>
-                        </div>
-                        <div class="form-row" style="padding: 3px;">
-                            <div class="col"><label>Medicação<br></label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-31" name="simmedicacao"><label class="form-check-label" for="formCheck-31">SIM</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-24" name="naomedicacao"><label class="form-check-label" for="formCheck-24">NÃO</label></div><input class="form-control form-control-sm" type="text" name="medicacao" placeholder="SE SIM QUAL?" style="width: 300PX;">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/untitled.js"></script>
 </body>
 
 </html>

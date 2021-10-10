@@ -6,55 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Trabalho 2</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
-        <div class="container"><a class="navbar-brand" href="index.html">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
+        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="index.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgb(0,0,0);font-size: 15px;">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;">Second Item</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;">Dropdown </a>
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Contato</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
                     </li>
-                </ul><span class="navbar-text actions"> <a class="login" href="login.html" style="font-size: 15px;">Login</a><a class="btn btn-light action-button" role="button" href="cadastro.html" style="color: rgb(0,0,0);background: rgba(86,198,158,0.81);font-size: 15px;">Cadastrar-se</a></span>
+                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="login.html" style="color: rgb(0,0,0);background: rgba(86,198,158,0.81);font-size: 15px;">Login</a></span>
             </div>
         </div>
     </nav>
-    <section class="features-boxed" style="color: var(--gray-dark);">
-        <div class="container" style="color: var(--gray-dark);">
-            <div class="intro">
-                <h2 class="text-center">Todos a bordo para sorrisos saudáveis! </h2>
+    <section class="border rounded shadow-lg" style="margin-right: 30px;margin-left: 30px;background: rgba(255,255,255,0.57);margin-top: 10px;">
+        <h1 class="text-center" style="margin-bottom: 17px;margin-top: 17px;padding-bottom: 10px;"><strong>Todos a bordo para sorrisos saudáveis!</strong><br></h1>
+        <section class="features-clean" style="background: rgba(255,255,255,0.32);padding-top: 10px;">
+            <div class="container">
+                <h4 class="text-center" style="margin-bottom: 17px;margin-top: 17px;padding-bottom: 10px;"><strong>Serviços prestados pelos nossos Profissionais:</strong><br></h4>
+                <div class="row features">
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name"><strong>Clínico geral</strong><br></h3>
+                        <p class="description" style="color: rgb(0,0,0);">São realizados os tratamentos mais simples, como consultas preventivas, limpezas, remoção de tártaro, entre outros procedimentos.<br></p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name"><strong>Ortodontia</strong><br></h3>
+                        <p class="description" style="color: rgb(0,0,0);">Por meio do uso de aparelhos dentários, os pacientes de todas as idades podem corrigir o posicionamento dos dentes e ossos faciais, tornando o sorriso mais harmônico e funcional.<br></p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name"><strong>Odontopediatria</strong><br></h3>
+                        <p class="description" style="color: rgb(0,0,0);">As crianças também precisam de acompanhamento dentário e essa é a função da odontopediatria. Mesmo durante a dentição de leite, elas já estão suscetíveis a cáries e outros problemas, por isso é preciso visitar um profissional especializado com regularidade.<br></p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name"><strong>Implantodontia</strong><br></h3>
+                        <p class="description" style="color: rgb(0,0,0);">O tratamento com implantodontia é indicado para substituir dentes faltantes na boca de forma muito eficiente. Ele é realizado por meio da implantação de um cilindro de titânio no osso maxilar, substituindo a raiz do dente ausente. Em seguida, é colocada a prótese feita sob medida, fixada no implante por meio de parafusos.<br></p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name"><strong>Prótese dentária</strong><br></h3>
+                        <p class="description" style="color: rgb(0,0,0);">Responsável pela reconstrução e reposição dos dentes danificados ou perdidos. O uso de próteses pode influenciar positivamente a mastigação, dicção e estética do paciente, além de proteger as funções articulares.<br></p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name">Outros serviços</h3>
+                        <p class="description" style="color: rgb(0,0,0);">Periodontia<br>Dentística<br>Clareamento dentário<br>Facetas de porcelana ou lentes de contato<br>E muito mais...</p>
+                    </div>
+                </div>
             </div>
-            <div class="row justify-content-center features">
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="far fa-id-badge icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Identificacao.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>FICHA IDENTIFICAÇÃO</strong><br></a></div>
+        </section>
+        <div class="simple-slider" style="margin: -1px;margin-bottom: 14px;">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/3b5e178bba8cd55963fbc8fdbafc-1446755.jpg&quot;) center center / contain no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/brace_dentist_teeth_wire_orthodontic-73724.jpg&quot;) center center / contain no-repeat;"></div>
+                    <div class="swiper-slide" style="background: url(&quot;assets/img/2a22eab82645342dd5170312fb83-1446753.jpg&quot;) center center / contain no-repeat;"></div>
                 </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="#" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="border rounded shadow-lg team-boxed" style="margin-right: 30px;margin-left: 30px;background: rgba(255,255,255,0.57);margin-top: -2px;margin-bottom: 10px;">
+        <div class="container">
+            <div class="intro" style="padding: 10px;">
+                <h3 class="text-center border rounded-pill border-dark shadow-lg d-md-flex justify-content-md-center" style="font-family: 'Abril Fatface', serif;font-size: 42px;">Depoimentos</h3>
+                <p class="lead text-center" style="color: rgb(0,0,0);">Para aqueles que possuem alguma dúvida sobre nosso serviço, aqui vai alguns depoimentos dos nossos pacientes!</p>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="assets/img/1630635867871.jpg">
+                        <h3 class="name">Lucas Develis</h3>
+                        <p class="title">Musician</p>
+                        <p class="description">Muito obrigado Dr. Vitor Molina por seu excelente atendimento e profissionalismo. Frequentei a clínica durante um ano e só tenho elogios a fazer. O espaço é ótimo e os profissionais extremamente competentes. Estou muito satisfeito e recomendo!<br></p>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="fa fa-list-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="questionario.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>QUESTIONÁRIO DE SAÚDE</strong><br></a></div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="assets/img/1618767954276.jpg">
+                        <h3 class="name">Gabriel Mattos</h3>
+                        <p class="title">Artist</p>
+                        <p class="description">A dedicação e o profissionalismo do Dr. Vitor em satisfazer plenamente os anseios de seus pacientes são de fazer inveja a qualquer um. Estou completamente realizada com todo o tratamento que tive desde a minha primeira consulta. Ah se todos os profissionais de todas as outras áreas escutassem os desejos de seus pacientes... Deixo aqui, com sinceridade, o meu muito obrigado por tudo.<br></p>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="far fa-clipboard icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="prontuario.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>PRONTUÁRIO</strong><br></a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-folder-symlink icon" style="color: rgb(33,132,248);">
-                            <path d="m11.798 8.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"></path>
-                            <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm.694 2.09A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09l-.636 7a1 1 0 0 1-.996.91H2.826a1 1 0 0 1-.995-.91l-.637-7zM6.172 2a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"></path>
-                        </svg><a class="learn-more" href="encaminhamentoint.jsp" style="font-size: 18px;color: var(--gray-dark);margin: 0px 0px 8px;height: 21px;width: 210px;"><br><strong>FORMULÁRIO DE ENCAMINHAMENTO INTERNO</strong><br></a></div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="assets/img/1591815195805.jpg">
+                        <h3 class="name">Paulo Leonardo</h3>
+                        <p class="title">Stylist</p>
+                        <p class="description">Dr Luis, gostaria de agradecer o tratamento que tive em sua clínica desde a minha primeira consulta. O sr me passou segurança desde o primeiro momento. E isso tirou o medo que sempre tive de dentista. Um sorriso bonito realmente faz toda a diferença em nossas vidas. Estou muito feliz. Muito obrigado!<br></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,7 +137,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
-                    <h3>Company Name</h3>
+                    <h3>Saúde Digital</h3>
                     <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
                 </div>
             </div>
@@ -88,6 +146,10 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/untitled.js"></script>
 </body>
 
 </html>

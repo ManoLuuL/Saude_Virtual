@@ -1,4 +1,5 @@
 util\Escolaridade.class
+br\com\DAO\ConexaoDAO.class
 dominion\FichaIdentificacao.class
 util\Sexo.class
 dominion\Pacientecadastro.class

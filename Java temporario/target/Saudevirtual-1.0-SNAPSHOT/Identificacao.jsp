@@ -53,7 +53,7 @@
                             <div class="col"><label style="font-size: 20px;"><strong>Dados Pessoais:</strong></label><input class="form-control form-control-sm" type="text" placeholder="NOME COMPLETO" name="txtnome" style="width: 500px;" required=""></div>
                         </div>
                         <div class="form-row" style="padding: 3px;">
-                            <div class="col"><input class="form-control form-control-sm" type="text" name="txtcpf" placeholder="CPF" style="width: 200px;" required=""></div>
+                            <div class="col"><input class="form-control form-control-sm" type="text" name="txtcpf" placeholder="CPF" style="width: 200px;" required="" onkeypress="$(this).mask('000.000.000-00');"></div>
                             <div class="col"><input class="form-control form-control-sm" type="text" name="txtrg" placeholder="RG" required=""></div>
                             <div class="col"></div>
                             <div class="col"></div>
@@ -177,6 +177,7 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </body>
 
 </html>
