@@ -1,11 +1,13 @@
+dominion\FichaIdentificacao.class
+util\validacpf.class
+br\com\DAO\UsuarioDAO.class
 util\Escolaridade.class
 br\com\DAO\ConexaoDAO.class
-dominion\FichaIdentificacao.class
+br\com\DTO\UsuarioDTO.class
 util\Sexo.class
-dominion\Pacientecadastro.class
+dominion\FcIdFiliacao.class
 com\mycompany\saudevirtual\resources\JavaEE8Resource.class
-dominion\Dentistacadastro.class
 com\mycompany\saudevirtual\JAXRSConfiguration.class
 controles\Servidentifica.class
 util\Graduacao.class
-util\validacpf.class
+util\ManipulaData.class

@@ -5,28 +5,34 @@
  */
 package dominion;
 
+import util.ManipulaData;
+
 /**
  *
  * @author T-Gamer
  */
 public class FichaIdentificacao {
-    
+
     private String nome;
     private String cpf;
     private String rg;
     private String nascimento;
+    private String estado_civil;
+    private String sexo;
     private String peso;
     private String altura;
+    private String cor;
     private String cidade;
     private String estado;
-    private String profisao;
+    private String escolaridade;
+    private String profissao;
     
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = nome.toUpperCase();
     }
 
     public String getCpf() {
@@ -50,7 +56,30 @@ public class FichaIdentificacao {
     }
 
     public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
+        ManipulaData md = new ManipulaData();
+        
+        try {
+            this.nascimento = md.formatarData(nascimento);
+        } catch (Exception e) {
+            this.nascimento = null;
+            e.printStackTrace();
+        }
+    }
+
+    public String getEstado_civil() {
+        return estado_civil;
+    }
+
+    public void setEstado_civil(String estado_civil) {
+        this.estado_civil = estado_civil;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public String getPeso() {
@@ -69,6 +98,14 @@ public class FichaIdentificacao {
         this.altura = altura;
     }
 
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
     public String getCidade() {
         return cidade;
     }
@@ -85,11 +122,24 @@ public class FichaIdentificacao {
         this.estado = estado;
     }
 
-    public String getPorfisao() {
-        return profisao;
+    public String getEscolaridade() {
+        return escolaridade;
     }
 
-    public void setPorfisao(String porfisao) {
-        this.profisao = porfisao;
+    public void setEscolaridade(String escolaridade) {
+        this.escolaridade = escolaridade;
     }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+    
+    
+    
+    
+    
 }

@@ -5,9 +5,12 @@
  */
 package controles;
 
-import dominion.Pacientecadastro;
+
+import dominion.FcIdFiliacao;
+import dominion.FichaIdentificacao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Servidentifica extends HttpServlet {
 
-    Pacientecadastro paciente;
+    FichaIdentificacao ficha;
+    FcIdFiliacao pais;
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,14 +37,91 @@ public class Servidentifica extends HttpServlet {
     
     private void recebeDados(HttpServletRequest request){
     
+        String nome = request.getParameter("txtnome");
+        String cpf = request.getParameter("txtcpf");
+        String rg = request.getParameter("txtrg");
+        String data = request.getParameter("txtdata");
+        String estadocivil= request.getParameter("txtestadocv");
+        String sexo = request.getParameter("sexo");
+        String peso = request.getParameter("txtpeso");
+        String altura = request.getParameter("txtaltura");
+        String cor = request.getParameter("cor");
+        String cidade = request.getParameter("txtnaturalidade");
+        String estado = request.getParameter("txtestado");
+        String escolaridade = request.getParameter("slescola");
+        String profissao = request.getParameter("txtprofissao");
+        
+         identificapaciente(nome, cpf, rg, data, estadocivil, peso, altura, cor, cidade, estado, escolaridade, profissao);
+        
+        String nomepai = request.getParameter("nomepai");
+        String nacionalidadepai = request.getParameter("nacionalidadepai");
+        String nomemae = request.getParameter("nomemae");
+        String nacionalidademae = request.getParameter("nacionalidademae");
+        String telefone = request.getParameter("txttelefone");
+        String endereco = request.getParameter("txtendereco");
+        String bairro = request.getParameter("txtbairro");
+        String cidadepais = request.getParameter("txtcidade");
+        String estadopais = request.getParameter("txtestadofl");
+        String cep = request.getParameter("txtcep");
+        String complemento = request.getParameter("txtcomplemento");
+        
+        identificafiliacao(nomepai, nacionalidadepai, nomemae, nacionalidademae, telefone, endereco, bairro, cidadepais, estadopais, cep, complemento);
     }
     
+    public void identificapaciente(String nome, String cpf, String rg, 
+            String data, String estadocivil,String peso, String altura,String cor, 
+           String cidade, String estado, String escolaridade, String profissao ){
+    
+        ficha = new FichaIdentificacao();
+        ficha.setNome(nome);
+        ficha.setCpf(cpf);
+        ficha.setRg(rg);
+        ficha.setNascimento(data);
+        ficha.setEstado_civil(estadocivil);
+        ficha.setPeso(peso);
+        ficha.setAltura(altura);
+        ficha.setCor(cor);
+        ficha.setCidade(cidade);
+        ficha.setEstado(estado);
+        ficha.setEscolaridade(escolaridade);
+        ficha.setProfissao(profissao);
+        
+    }
+    
+    public void identificafiliacao(String nomepai, String nacionalidadepai, String nomemae, 
+            String nacionalidademae, String telefone,String endereco, String bairro,String cidadepais, 
+           String estadopais, String cep, String complemento){
+        
+        pais = new FcIdFiliacao();
+        pais.setNome_pai(nomepai);
+        pais.setNacionalidade_pai(nacionalidadepai);
+        pais.setNome_mae(nomemae);
+        pais.setNacionalidade_mae(nacionalidademae);
+        pais.setTelefone(telefone);
+        pais.setEndereco_pais(endereco);
+        pais.setBairro_pais(bairro);
+        pais.setCidade_pais(cidadepais);
+        pais.setEstado_pais(estadopais);
+        pais.setCep(cep);
+        pais.setComplemento(complemento);
+    }
+    
+    public void redirecionar(HttpServletRequest request, HttpServletResponse response){
+        RequestDispatcher rd = request.getRequestDispatcher("Termoderesposabilidade.html");
+        try {
+            rd.forward(request, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            
+    }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
                 recebeDados(request);
+                redirecionar(request, response);
                 
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

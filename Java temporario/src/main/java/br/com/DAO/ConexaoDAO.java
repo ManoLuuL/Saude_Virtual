@@ -15,6 +15,7 @@ public class ConexaoDAO {
             con = DriverManager.getConnection(url);
             
         } catch (SQLException e) {
+            System.out.println(e);
         }
         return con;
     }
