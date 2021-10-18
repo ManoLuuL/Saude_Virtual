@@ -4,9 +4,25 @@
         <servlet-name>Servidentifica</servlet-name>
         <servlet-class>controles.Servidentifica</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServQuest1</servlet-name>
+        <servlet-class>controles.ServQuest1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Autenticador</servlet-name>
+        <servlet-class>controles.Autenticador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServQuest1</servlet-name>
+        <url-pattern>/ServQuest1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Autenticador</servlet-name>
+        <url-pattern>/Autenticador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

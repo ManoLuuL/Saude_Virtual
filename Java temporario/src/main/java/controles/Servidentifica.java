@@ -24,7 +24,7 @@ public class Servidentifica extends HttpServlet {
 
     FichaIdentificacao ficha;
     FcIdFiliacao pais;
-    
+    String destino = "/Termoderesposabilidade.html";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -107,7 +107,7 @@ public class Servidentifica extends HttpServlet {
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){
-        RequestDispatcher rd = request.getRequestDispatcher("Termoderesposabilidade.html");
+        RequestDispatcher rd = request.getRequestDispatcher(destino);
         try {
             rd.forward(request, response);
         } catch (Exception e) {

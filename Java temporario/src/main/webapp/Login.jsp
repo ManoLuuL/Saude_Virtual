@@ -48,7 +48,9 @@
             <div class="illustration"><i class="far fa-user-circle" style="color: var(--secondary);"></i></div>
             <div class="form-group"><input class="form-control" type="text" name="usuario" placeholder="Usuário"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Senha" style="color: var(--gray-dark);"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Login</button></div><a class="forgot" href="#">Esqueceu sua senha?</a>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Login</button></div>
+            <a class="forgot" href="#">Esqueceu sua senha?</a>
         </form>
     </section>
     <footer class="footer-dark">
