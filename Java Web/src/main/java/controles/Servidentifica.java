@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -109,15 +110,23 @@ public class Servidentifica extends HttpServlet {
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("FICHA", ficha);
+        session.setAttribute("PAIS", pais);
+        
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         try {
             rd.forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            this.e = e.getMessage();
         }
             
     }
     
+ 
+       
+        
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

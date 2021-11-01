@@ -1,7 +1,7 @@
 
 <%@page import="br.com.DTO.UsuarioDTO"%>
 <%@page import="br.com.DAO.UsuarioDAO"%>
-
+<%@page import="java.io.IOException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,17 +13,18 @@
         <%
             try {
                     UsuarioDTO objUsuarioDTO = new UsuarioDTO();
-            objUsuarioDTO.setNome_usuario(request.getParameter("Nome"));
-            objUsuarioDTO.setCpf_cro(request.getParameter("CPFCRO"));
-            objUsuarioDTO.setUsuario(request.getParameter("usuarioP"));
-            objUsuarioDTO.setSenha_usuario(request.getParameter("senha"));
-            objUsuarioDTO.setTipo_usuario(request.getParameter("TipoUsu"));
+                objUsuarioDTO.setNome_usuario(request.getParameter("Nome"));
+                objUsuarioDTO.setCpf_cro(request.getParameter("CPFCRO"));
+                objUsuarioDTO.setUsuario(request.getParameter("usuarioP"));
+                objUsuarioDTO.setSenha_usuario(request.getParameter("senha"));
+                objUsuarioDTO.setTipo_usuario(request.getParameter("TipoUsu"));
             
-            UsuarioDAO objUsuarioDAO = new UsuarioDAO();
-            objUsuarioDAO.CadastrarUsuario(objUsuarioDTO);
+                UsuarioDAO objUsuarioDAO = new UsuarioDAO();
+                objUsuarioDAO.CadastrarUsuario(objUsuarioDTO);
             
             
                 } catch (Exception e) {
+                    e.printStackTrace();
                 }
             
         %>
