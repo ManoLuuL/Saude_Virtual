@@ -5,8 +5,8 @@
  */
 package controles;
 
-import dominion.Quest1;
-import dominion.Quest2;
+import dominion.QuestSaude;
+import dominion.QuestSaude2;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServQuest1 extends HttpServlet {
 
-    Quest1 questionario;
+    QuestSaude questionario;
     String destino = "/Impressao.html";
-    Quest2 questionario2;
+    QuestSaude2 questionario2;
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -69,7 +69,7 @@ public class ServQuest1 extends HttpServlet {
             String cardiovascular, String gastrite, String diabetico, String desmaiou, String tratamento_med, 
             String toma_medc, String doente_5, String habitos, String ansie_depre){
     
-        questionario = new Quest1();
+        questionario = new QuestSaude();
         questionario.setQueixa(queixa);
         questionario.setHitdoenca(hitdoenca);
         questionario.setHemorragia(hemorragia);
@@ -90,7 +90,7 @@ public class ServQuest1 extends HttpServlet {
             String caxumba, String hepatite, String varicela, String aids, 
             String outra_doenca, String fumanete, String frequencia){
     
-        questionario2 = new Quest2();
+        questionario2 = new QuestSaude2();
         questionario2.setTuberculose(tuberculose);
         questionario2.setSarampo(sarampo);
         questionario2.setSifilis(sifilis);

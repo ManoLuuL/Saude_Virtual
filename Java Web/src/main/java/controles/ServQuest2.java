@@ -1,7 +1,7 @@
 package controles;
 
-import dominion.Quest3;
-import dominion.Quest4;
+import dominion.QuestInf;
+import dominion.QuestInf2;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServQuest2 extends HttpServlet {
 
-    Quest3 questoes3;
-    Quest4 questoes4;
+    QuestInf questoes3;
+    QuestInf2 questoes4;
     String destino = "/Impressao.html";
     
     private void receberesposta2(HttpServletRequest request){
@@ -45,7 +45,7 @@ public class ServQuest2 extends HttpServlet {
     public void parte3(String histgest, String parto, String prob_parto, String amamentacao, 
             String idadeamamentacao, String anestesia, String grave_doenca, String vacina){
     
-        questoes3 = new Quest3();
+        questoes3 = new QuestInf();
         questoes3.setHistgest(histgest);
         questoes3.setParto(parto);
         questoes3.setProb_parto(prob_parto);
@@ -59,7 +59,7 @@ public class ServQuest2 extends HttpServlet {
     public void parte4(String durante_anos, String aprendizado, String estado_ani, String sono, 
             String conduta_psic, String alimentacao, String sociabilidade, String conduta_pato, String observacao){
     
-        questoes4 = new Quest4();
+        questoes4 = new QuestInf2();
         //questoes4.setDurante_anos(durante_anos);
         questoes4.setAprendizado(aprendizado);
         questoes4.setEstado_ani(estado_ani);
