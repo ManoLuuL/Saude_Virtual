@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ServQuest1 extends HttpServlet {
 
     Quest1 questionario;
-    String destino = "/questionario2.html";
+    String destino = "/Impressao.html";
     Quest2 questionario2;
     
     /**

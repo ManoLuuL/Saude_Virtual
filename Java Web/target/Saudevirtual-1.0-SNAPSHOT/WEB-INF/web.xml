@@ -16,6 +16,10 @@
         <servlet-name>ServQuest2</servlet-name>
         <servlet-class>controles.ServQuest2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServQuest3</servlet-name>
+        <servlet-class>controles.ServQuest3</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ServQuest2</servlet-name>
         <url-pattern>/ServQuest2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServQuest3</servlet-name>
+        <url-pattern>/ServQuest3</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

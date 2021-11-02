@@ -14,6 +14,7 @@ public class ServQuest2 extends HttpServlet {
 
     Quest3 questoes3;
     Quest4 questoes4;
+    String destino = "/Impressao.html";
     
     private void receberesposta2(HttpServletRequest request){
     
@@ -71,7 +72,7 @@ public class ServQuest2 extends HttpServlet {
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){
-        RequestDispatcher rd = request.getRequestDispatcher("");
+        RequestDispatcher rd = request.getRequestDispatcher(destino);
         try {
             rd.forward(request, response);
         } catch (Exception e) {
