@@ -28,15 +28,15 @@
 
 <body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
-        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="index.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="indexdentista.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="indexdentista.html" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Contato</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
                     </li>
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="login.html" style="color: rgb(0,0,0);background: rgba(86,198,158,0.81);font-size: 15px;">Login</a></span>
+                </ul><label class="text-uppercase border rounded border-white mr-auto">Label</label><span class="navbar-text actions"> </span>
             </div>
         </div>
     </nav>
@@ -49,10 +49,10 @@
                 <div class="col">
                     <form>
                         <div class="form-group">
-                            <div class="form-row">
+                            <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label class="col-form-label">Atestado para fim especifico de:</label></div>
                             </div>
-                            <div class="form-row" style="padding: 3px;">
+                            <div class="form-row" style="padding: 5px;">
                                 <div class="col">
                                     <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Justificativa de falta ao trabalho</label></div>
                                     <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Dispensa de atividade escolares</label></div>
@@ -60,47 +60,26 @@
                                     <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Justificativa de comparecimento</label></div>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row" style="padding: 5px;">
                                 <div class="col-md-11">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Justificativa de comparecimento, acompanhando o(a) filho(a), menor ou incapaz,</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Justificativa de comparecimento, acompanhando o(a) filho(a), menor ou incapaz,&nbsp;na data de hoje.<br></label></div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-md-4" style="padding-left: 28px;"><input class="form-control form-control-sm" type="text" style="width: 200px;"></div>
-                                <div class="col-md-4 offset-md-0"><label class="col-form-label">, na data de hoje.</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label>A pedido do(a) interessado(a)&nbsp;</label><label>Label</label><label>&nbsp;, portador(a) do RG&nbsp;</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row">
+                            <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label class="col-form-label">que esteve sob tratamento odontológico na clinica.</label></div>
                             </div>
-                            <div class="form-row">
-                                <div class="col"><label>No período das&nbsp;</label><label>Label</label><label>:</label><label>Label</label><label>&nbsp; ás&nbsp;&nbsp;</label><label>Label</label><label>:</label><label>Label</label><label>&nbsp; horas, do dia&nbsp;</label><label>Label</label></div>
+                            <div class="form-row" style="padding: 5px;">
+                                <div class="col"><label>No período das&nbsp;</label><input class="form-control form-control-sm" type="text" name="inicio" style="width: 200px;"></div>
+                                <div class="col"><label>Até&nbsp;</label><input class="form-control form-control-sm" type="text" name="fim" style="width: 200px;"></div>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label>Devendo o(a) mesmo(a):</label>
                                     <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Retornar as atividades normais</label></div>
                                     <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Permanecer em repouso&nbsp;</label></div>
                                 </div>
                             </div><input class="form-control form-control-sm" type="text" name="repouso" placeholder="Dias para Repouso" style="width: 200px;">
-                            <div class="form-row" style="margin-top: 12px;margin-bottom: 12px;">
-                                <div class="col"><label>Bauru,</label><label>Label</label><label>&nbsp;de&nbsp;</label><label>Label</label><label>&nbsp;de&nbsp;</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="form-row" style="margin-top: 12px;margin-bottom: 0px;">
-                                        <div class="col"><label class="col-form-label">______________________________________</label></div>
-                                        <div class="col"><label class="col-form-label">______________________________________</label></div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col"><label class="col-form-label">Assinatura do Paciente/Responsável</label></div>
-                                        <div class="col"><label class="col-form-label">Ass. Do (a) professor(a) com carimbo ou nome completo e CRO</label></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label class="col-form-label">Rua Ir. Arminda 10-50 –Jd Brasil – 17011-160 Bauru- SP – Tel - (14) 2107-7269 / 2107- 7364<br></label></div>
+                            <div class="form-row" style="padding: 5px;">
+                                <div class="col"><button class="btn btn-primary" type="button">Avançar</button></div>
                             </div>
                         </div>
                     </form>
