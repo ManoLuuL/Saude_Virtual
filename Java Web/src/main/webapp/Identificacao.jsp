@@ -44,7 +44,7 @@
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
                     </li>
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="login.html" style="color: rgb(0,0,0);background: rgba(86,198,158,0.81);font-size: 15px;">Login</a></span>
+                </ul><span class="navbar-text actions"> </span><label class="text-uppercase border rounded border-white mr-auto">Label</label>
             </div>
         </div>
     </nav>
@@ -61,8 +61,8 @@
                                 <div class="col"><label style="font-size: 20px;"><strong>Dados Pessoais:</strong></label><input class="form-control form-control-sm" type="text" placeholder="NOME COMPLETO" name="txtnome" style="width: 500px;" required=""></div>
                             </div>
                             <div class="form-row" style="padding: 3px;">
-                                <div class="col"><input class="form-control form-control-sm" type="text" name="txtcpf" placeholder="CPF" style="width: 200px;" required=""></div>
-                                <div class="col"><input class="form-control form-control-sm" type="text" name="txtrg" placeholder="RG" required=""></div>
+                                <div class="col"><input class="form-control form-control-sm" type="text" name="txtcpf" placeholder="CPF" style="width: 200px;" required="" onkeypress="$(this).mask('000.000.000-00');"></div>
+                                <div class="col"><input class="form-control form-control-sm" type="text" name="txtrg" placeholder="RG" required="" onkeypress="$(this).mask('00.000.000-0');"></div>
                                 <div class="col"></div>
                                 <div class="col"></div>
                                 <div class="col"></div>
@@ -151,7 +151,7 @@
                                 <div class="col"><label class="col-form-label">Contato:</label></div>
                             </div>
                             <div class="form-row" style="padding: 3PX;">
-                                <div class="col"><input class="form-control form-control-sm" type="tel" name="txttelefone" placeholder="TELEFONE" required="" style="width: 200PX;"></div>
+                                <div class="col"><input class="form-control form-control-sm" type="tel" name="txttelefone" placeholder="TELEFONE" required="" style="width: 200PX;" onkeypress="$(this).mask('(00) 0000-00009')"></div>
                             </div>
                             <div class="form-row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">ENDEREÇO:</label></div>
@@ -169,7 +169,7 @@
                                 <div class="col"></div>
                             </div>
                             <div class="form-row" style="padding: 3PX;">
-                                <div class="col"><input class="form-control form-control-sm" type="text" style="width: 250PX;" name="txtcep" placeholder="CEP"></div>
+                                <div class="col"><input class="form-control form-control-sm" type="text" style="width: 250PX;" name="txtcep" placeholder="CEP" onkeypress="$(this).mask('00.000-000')"></div>
                             </div>
                             <div class="form-row" style="padding: 3PX;">
                                 <div class="col"><label>Complemento:</label><input class="form-control form-control-sm" type="text" name="txtcomplemento" placeholder="COMPLEMENTO (OPICIONAL)" style="width: 300PX;"></div>

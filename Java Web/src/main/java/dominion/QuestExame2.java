@@ -4,6 +4,8 @@ package dominion;
 public class QuestExame2 {
 
     private String alteracao;
+    private String pressaomin;
+    private String pressaomax;
     private String diagpresuntivo;
     private String examecompl;
     private String diagdef;
@@ -83,6 +85,22 @@ public class QuestExame2 {
 
     public void setRemedios(String remedios) {
         this.remedios = remedios;
+    }
+
+    public String getPressaomin() {
+        return pressaomin;
+    }
+
+    public void setPressaomin(String pressaomin) {
+        this.pressaomin = pressaomin;
+    }
+
+    public String getPressaomax() {
+        return pressaomax;
+    }
+
+    public void setPressaomax(String pressaomax) {
+        this.pressaomax = pressaomax;
     }
     
 }
