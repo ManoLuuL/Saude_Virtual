@@ -20,6 +20,14 @@
         <servlet-name>ServQuest3</servlet-name>
         <servlet-class>controles.ServQuest3</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Atestado</servlet-name>
+        <servlet-class>controles.ServAtestado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServReceituario</servlet-name>
+        <servlet-class>controles.ServReceituario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>ServQuest3</servlet-name>
         <url-pattern>/ServQuest3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Atestado</servlet-name>
+        <url-pattern>/Atestado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServReceituario</servlet-name>
+        <url-pattern>/ServReceituario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

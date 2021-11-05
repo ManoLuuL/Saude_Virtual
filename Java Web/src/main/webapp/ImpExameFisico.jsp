@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@page import="dominion.QuestExame2"%>
 <%@page import="dominion.QuestExame"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -32,23 +33,28 @@
     QuestExame exame;
     QuestExame2 exame2;
     HttpSession sessao = request.getSession(); 
-    String erro = "Primeiro, preencha a Ficha de Exame Físico."; 
+     
     
     exame = (QuestExame)sessao.getAttribute("EXAME");
     exame2 = (QuestExame2)sessao.getAttribute("EXAME2");
     
     if(exame == null || exame2 == null){
-    RequestDispatcher rd = request.getRequestDispatcher("/questionario3.jsp");
+    
+        response.setContentType("text/html");
+        PrintWriter pw=response.getWriter();
+        pw.println("<script type=\"text/javascript\">");
+        pw.println("alert('Primeiro, preencha o Exame Físico.');");
+        pw.println("</script>");
+        RequestDispatcher rd=request.getRequestDispatcher("/questionario3.html");
+        
         try {
             rd.forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
-        }      
+        } 
+    }
     %>   
-    <div class="alert alert-danger" role="alert">
-                     <%=erro%>
-            </div>
-            <%  } %>
+    
 <body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
         <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand text-left border rounded d-md-flex justify-content-md-center" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
@@ -143,7 +149,7 @@
                             </div>
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col"><a class="btn btn-primary" role="button" href="Impressao.html">Voltar</a></div>
-                                <div class="col"><button class="btn btn-primary" type="button">Imprimir</button></div>
+                        <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
                             </div>
                         </div>
                     </form>

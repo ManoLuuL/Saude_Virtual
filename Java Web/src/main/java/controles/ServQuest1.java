@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 public class ServQuest1 extends HttpServlet {
@@ -104,6 +105,11 @@ public class ServQuest1 extends HttpServlet {
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("Saude", questionario);
+        session.setAttribute("Saude2", questionario2);
+        
         RequestDispatcher rd = request.getRequestDispatcher(destino);
         try {
             rd.forward(request, response);
