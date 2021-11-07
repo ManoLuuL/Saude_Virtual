@@ -20,6 +20,7 @@ util\validacpf.class
 controles\Autenticador.class
 controles\ServQuest3.class
 controles\ServReceituario.class
+controles\AtestadoS.class
 dominion\QuestInf2.class
 util\Sexo.class
 dominion\FcIdFiliacao.class

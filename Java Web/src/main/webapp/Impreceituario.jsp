@@ -44,13 +44,9 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Receituario.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/receituario.html");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
+        rd.forward(request, response);
         
-        try {
-            rd.forward(request, response);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
     }
     %> 
 
@@ -68,7 +64,7 @@
                     <form>
                         <div class="form-group">
                             <div class="form-row">
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%=receita.getMedicamento() %></label></div>
                             </div>
                             <div class="form-row" style="margin-top: 12px;margin-bottom: 0px;padding: 5px;">
                                 <div class="col"><label class="col-form-label">______________________________________</label></div>

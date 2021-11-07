@@ -1,3 +1,4 @@
+<%@page import="dominion.FichaIdentificacao"%>
 <%@page import="dominion.QuestInf2"%>
 <%@page import="dominion.QuestInf"%>
 <%@page import="java.io.PrintWriter"%>
@@ -33,11 +34,13 @@
 <%      
     QuestInf Infantil;
     QuestInf2 Infantil2;
+    FichaIdentificacao ficha;
     HttpSession sessao = request.getSession(); 
      
     
     Infantil = (QuestInf)sessao.getAttribute("Infantil");
     Infantil2 = (QuestInf2)sessao.getAttribute("Infantil2");
+    ficha = (FichaIdentificacao) sessao.getAttribute("FICHA");
     
     if(Infantil == null || Infantil2 == null){
     
@@ -46,7 +49,7 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Formulario Infantil.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/questionario2.html");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
         
         try {
             rd.forward(request, response);
@@ -68,72 +71,86 @@
             <form>
                 <div class="form-group">
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label style="font-weight: bold;">Paciente:&nbsp;</label><label>nome</label></div>
-                        <div class="col"><label style="font-weight: bold;">CPF:&nbsp;</label><label>CPFpaciente</label></div>
+                        <div class="col"><label style="font-weight: bold;">Paciente:&nbsp;</label><label><%= ficha.getNome() %></label></div>
+                        <div class="col"><label style="font-weight: bold;">CPF:&nbsp;</label><label><%= ficha.getCpf() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
                         <div class="col"><label class="col-form-label">História da gestação:</label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label class="col-form-label">Label</label></div>
+                        <div class="col"><label class="col-form-label"><%= Infantil.getHistgest() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Nasceu de parto:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Nasceu de parto:&nbsp;&nbsp;</label><label><%= Infantil.getParto() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
                         <div class="col"><label class="col-form-label">A criança teve algum problema no parto?</label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label class="col-form-label">Label</label></div>
+                        <div class="col"><label class="col-form-label"><%= Infantil.getProb_parto() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>A amamentação foi:&nbsp;</label><label>Label</label></div>
-                        <div class="col"><label>até a idade de&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>A amamentação foi:&nbsp;</label><label><%= Infantil.getAmamentacao() %></label></div>
+                        <div class="col"><label>até a idade de&nbsp;</label><label><%= Infantil.getIdadeamamentacao() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
                         <div class="col"><label class="col-form-label">Já lhe foi dito para não tomar anestesia local?&nbsp;</label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label class="col-form-label">Label</label></div>
+                        <div class="col"><label class="col-form-label"><%= Infantil.getAnestesia() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
                         <div class="col"><label class="col-form-label">Já teve ou viveu com alguém que tivesse doença grave e contagiosa?</label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label class="col-form-label">Label</label></div>
+                        <div class="col"><label class="col-form-label"><%= Infantil.getGrave_doenca() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
                         <div class="col"><label class="col-form-label">A criança já foi vacinada?</label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
+                        <div class="col"><label class="col-form-label"><%= Infantil.getVacina() %></label></div>
+                    </div>
+                    <div class="form-row" style="padding: 3px;">
                         <div class="col-md-12 offset-md-4"><label class="col-form-label" style="text-align: center;"><strong>CONDUTA DA CRIANÇA</strong></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Durante os 2 primeiros anos de vida:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Durante os 2 primeiros anos de vida:&nbsp;&nbsp;</label>
+                            <label>
+                            
+                    <%
+                        String[] durante_anos = {"Sentou", "Engatinhou", "Andou", "Falou"};
+                            for (int i = 0; i < Infantil2.getDurante_anos().length; i++) {
+                                    if (Infantil2.getDurante_anos()[i])
+                                        out.print(durante_anos[i] + ", ");
+                                }
+                    %>
+                            </label>
+                        </div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>No lar e na escola teve alguma dificuldade no aprendizado?&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>No lar e na escola teve alguma dificuldade no aprendizado?&nbsp;&nbsp;</label><label><%= Infantil2.getAprendizado() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Estado anímico:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Estado anímico:&nbsp;&nbsp;</label><label><%= Infantil2.getEstado_ani() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Tem sono:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Tem sono:&nbsp;&nbsp;</label><label><%= Infantil2.getSono() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Conduta psicomotora:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Conduta psicomotora:&nbsp;&nbsp;</label><label><%= Infantil2.getConduta_psic() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Alimentação:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Alimentação:&nbsp;&nbsp;</label><label><%= Infantil2.getAlimentacao() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Sociabilidade:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Sociabilidade:&nbsp;&nbsp;</label><label><%= Infantil2.getSociabilidade() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Apresenta alguma patologia de conduta:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Apresenta alguma patologia de conduta:&nbsp;&nbsp;</label><label><%= Infantil2.getConduta_pato() %></label></div>
                     </div>
                     <div class="form-row" style="padding: 3px;">
-                        <div class="col"><label>Observações:&nbsp;&nbsp;</label><label>Label</label></div>
+                        <div class="col"><label>Observações:&nbsp;&nbsp;</label><label><%= Infantil2.getObservacao() %></label></div>
                     </div>
                     <div class="form-row" style="margin-top: 12px;margin-bottom: 0px;">
                         <div class="col"><label class="col-form-label">______________________________________</label></div>

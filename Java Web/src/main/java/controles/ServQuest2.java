@@ -15,7 +15,7 @@ public class ServQuest2 extends HttpServlet {
 
     QuestInf questoes3;
     QuestInf2 questoes4;
-    String destino = "/Impressao.html";
+    String destino = "/Formularios.html";
     
     private void receberesposta2(HttpServletRequest request){
     
@@ -30,7 +30,10 @@ public class ServQuest2 extends HttpServlet {
     
         parte3(histgest, parto, prob_parto, amamentacao, idadeamamentacao, anestesia, grave_doenca, vacina);
         
-        String durante_anos = request.getParameter("durante");
+        String sentou = request.getParameter("sentou");
+        String engatinhou = request.getParameter("engatinhou");
+        String andou = request.getParameter("andou");
+        String falou = request.getParameter("falou");
 	String aprendizado = request.getParameter("aprend");
 	String estado_ani = request.getParameter("estadoa");
 	String sono = request.getParameter("sono");
@@ -40,7 +43,7 @@ public class ServQuest2 extends HttpServlet {
 	String conduta_pato = request.getParameter("patologia");
 	String observacao = request.getParameter("obs");
                 
-        parte4(durante_anos, aprendizado, estado_ani, sono, conduta_psic, alimentacao, sociabilidade, conduta_pato, observacao);
+        parte4(sentou, engatinhou, andou, falou, aprendizado, estado_ani, sono, conduta_psic, alimentacao, sociabilidade, conduta_pato, observacao);
     }
     
     public void parte3(String histgest, String parto, String prob_parto, String amamentacao, 
@@ -57,11 +60,11 @@ public class ServQuest2 extends HttpServlet {
         questoes3.setVacina(vacina);
     }
     
-    public void parte4(String durante_anos, String aprendizado, String estado_ani, String sono, 
-            String conduta_psic, String alimentacao, String sociabilidade, String conduta_pato, String observacao){
+    public void parte4(String sentou,String engatinhou, String andou, String falou, 
+            String aprendizado, String estado_ani, String sono, String conduta_psic, 
+            String alimentacao, String sociabilidade, String conduta_pato, String observacao){
     
         questoes4 = new QuestInf2();
-        //questoes4.setDurante_anos(durante_anos);
         questoes4.setAprendizado(aprendizado);
         questoes4.setEstado_ani(estado_ani);
         questoes4.setSono(sono);
@@ -70,6 +73,17 @@ public class ServQuest2 extends HttpServlet {
         questoes4.setSociabilidade(sociabilidade);
         questoes4.setConduta_pato(conduta_pato);
         questoes4.setObservacao(observacao);
+        
+        verificaAnos(sentou, 0);
+        verificaAnos(engatinhou, 1);
+        verificaAnos(andou, 2);
+        verificaAnos(falou, 3);
+        
+    }
+    
+    private void verificaAnos(String comportamento, int valor) {
+        if (comportamento != null)
+            questoes4.setComportamentos(valor);
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){

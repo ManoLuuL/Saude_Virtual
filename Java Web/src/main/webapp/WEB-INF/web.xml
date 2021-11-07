@@ -28,6 +28,10 @@
         <servlet-name>ServReceituario</servlet-name>
         <servlet-class>controles.ServReceituario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AtestadoS</servlet-name>
+        <servlet-class>controles.AtestadoS</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>ServReceituario</servlet-name>
         <url-pattern>/ServReceituario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AtestadoS</servlet-name>
+        <url-pattern>/AtestadoS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

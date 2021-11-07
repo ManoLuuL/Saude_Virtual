@@ -4,7 +4,7 @@ package dominion;
 
 public class QuestInf2 {
 
-    private String[] durante_anos;
+    private boolean[] durante_anos;
     private String aprendizado;
     private String estado_ani;
     private String sono;
@@ -14,26 +14,35 @@ public class QuestInf2 {
     private String conduta_pato;
     private String observacao;
     
+    
+    public QuestInf2(){
+        duranteanos();
+    }
+    
     //metodo
      public void duranteanos() {
         
         //inicializa vetor
-        setDurante_anos(new String[4]);
+        setDurante_anos(new boolean[4]);
         
         for (int i = 0; i < getDurante_anos().length; i++) {
-            getDurante_anos()[i] = " ";
+            getDurante_anos()[i] = false;
         }
     }
     
     
-    public String[] getDurante_anos() {
+    public boolean[] getDurante_anos() {
         return durante_anos;
     }
 
-    public void setDurante_anos(String[] durante_anos) {
+    public void setDurante_anos(boolean[] durante_anos) {
         this.durante_anos = durante_anos;
     }
 
+    public void setComportamentos(int comportamento) {
+        durante_anos[comportamento] = true;
+    }
+    
     public String getAprendizado() {
         return aprendizado;
     }

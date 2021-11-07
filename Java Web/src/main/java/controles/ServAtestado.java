@@ -13,27 +13,53 @@ import javax.servlet.http.HttpSession;
 
 public class ServAtestado extends HttpServlet {
 
-    String destino = "/Impressao.html";
+    String destino = "/Formularios.html";
     Atestado atestado;
+    String e;
+     /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     
     private void recebeatestado(HttpServletRequest request){
-         String tipo = request.getParameter("tipo");
+         String justifica1 = request.getParameter("justi1");
+         String justifica2 = request.getParameter("justi2");
+         String justifica3 = request.getParameter("justi3");
+         String justifica4 = request.getParameter("justi4");
+         String justifica5 = request.getParameter("justi5");
          String periodoini = request.getParameter("inicio");
          String periodofinal = request.getParameter("fim");
-         String repolso = request.getParameter("repouso");
+         String repouso = request.getParameter("repouso");
          String dias = request.getParameter("dias");
          
-         atestado(tipo, periodoini, periodofinal, repolso, dias);
+         atestado(justifica1, justifica2, justifica3, justifica4, justifica5, periodoini, periodofinal, repouso, dias);
     }
     
-    public void atestado(String tipo, String periodoini, String periodofinal, String repolso, String dias){
+    public void atestado(String justifica1,String justifica2, String justifica3, 
+            String justifica4, String justifica5, String periodoini, 
+            String periodofinal, String repouso, String dias){
     
         atestado = new Atestado();
-        atestado.setTipo(tipo);
         atestado.setPeriodoini(periodoini);
         atestado.setPeriodofinal(periodofinal);
-        atestado.setRepolso(repolso);
+        atestado.setRepouso(repouso);
         atestado.setDias(dias);
+        
+        verificaJustificativa(justifica1, 0);
+        verificaJustificativa(justifica2, 1);
+        verificaJustificativa(justifica3, 2);
+        verificaJustificativa(justifica4, 3);
+        verificaJustificativa(justifica5, 4);
+    }
+    
+    private void verificaJustificativa(String just, int valor) {
+        if (just != null)
+            atestado.setJustificativas(valor);
     }
     
     public void redirecionar(HttpServletRequest request, HttpServletResponse response){
@@ -46,21 +72,13 @@ public class ServAtestado extends HttpServlet {
         try {
             rd.forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            this.e = e.getMessage();
         }
             
     }
     
     
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

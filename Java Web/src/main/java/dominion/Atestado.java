@@ -2,20 +2,40 @@ package dominion;
 
 public class Atestado {
 
-    private String tipo;
+    private boolean[] tipo;
     private String periodoini;
     private String periodofinal;
-    private String repolso;
+    private String repouso;
     private String dias;
     
-    public String getTipo() {
+    public Atestado(){
+        justificativa();
+    }
+    
+    //metodo
+     public void justificativa() {
+        
+        //inicializa vetor
+        setTipo(new boolean[5]);
+        
+        for (int i = 0; i < getTipo().length; i++) {
+            getTipo()[i] = false;
+        }
+    }
+    
+    
+    public boolean[] getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(boolean[] tipo) {
         this.tipo = tipo;
     }
 
+    public void setJustificativas(int just) {
+        tipo[just] = true;
+    }
+    
     public String getPeriodoini() {
         return periodoini;
     }
@@ -32,12 +52,12 @@ public class Atestado {
         this.periodofinal = periodofinal;
     }
 
-    public String getRepolso() {
-        return repolso;
+    public String getRepouso() {
+        return repouso;
     }
 
-    public void setRepolso(String repolso) {
-        this.repolso = repolso;
+    public void setRepouso(String repouso) {
+        this.repouso = repouso;
     }
 
     public String getDias() {

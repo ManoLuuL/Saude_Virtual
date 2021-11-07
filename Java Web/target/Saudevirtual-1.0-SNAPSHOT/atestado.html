@@ -47,39 +47,48 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <form>
+                    <form action="AtestadoS" method="post">
                         <div class="form-group">
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label class="col-form-label">Atestado para fim especifico de:</label></div>
                             </div>
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col">
-                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Justificativa de falta ao trabalho</label></div>
-                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Dispensa de atividade escolares</label></div>
-                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Dispensa de atividades físicas, desportivas, judiciais ou militares</label></div>
-                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Justificativa de comparecimento</label></div>
+                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-1" name="justi1" value="0">
+                                        <label class="form-check-label" for="formCheck-1">Justificativa de falta ao trabalho</label></div>
+                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-4" name="justi2" value="1">
+                                        <label class="form-check-label" for="formCheck-4">Dispensa de atividade escolares</label></div>
+                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-3" name="justi3" value="2">
+                                        <label class="form-check-label" for="formCheck-3">Dispensa de atividades físicas, desportivas, judiciais ou militares</label></div>
+                                    <div class="form-check" style="padding-bottom: 5px;"><input class="form-check-input" type="checkbox" id="formCheck-2" name="justi4" value="3">
+                                        <label class="form-check-label" for="formCheck-2">Justificativa de comparecimento</label></div>
                                 </div>
                             </div>
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col-md-11">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Justificativa de comparecimento, acompanhando o(a) filho(a), menor ou incapaz,&nbsp;na data de hoje.<br></label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5" name="justi5" value="4">
+                                        <label class="form-check-label" for="formCheck-5">Justificativa de comparecimento, acompanhando o(a) filho(a), menor ou incapaz,&nbsp;na data de hoje.<br></label></div>
                                 </div>
                             </div>
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label class="col-form-label">que esteve sob tratamento odontológico na clinica.</label></div>
                             </div>
                             <div class="form-row" style="padding: 5px;">
-                                <div class="col"><label>No período das&nbsp;</label><input class="form-control form-control-sm" type="text" name="inicio" style="width: 200px;"></div>
-                                <div class="col"><label>Até&nbsp;</label><input class="form-control form-control-sm" type="text" name="fim" style="width: 200px;"></div>
+                                <div class="col"><label>No período das&nbsp;</label>
+                                    <input class="form-control form-control-sm" type="text" name="inicio" style="width: 200px;"></div>
+                                <div class="col"><label>Até&nbsp;</label>
+                                    <input class="form-control form-control-sm" type="text" name="fim" style="width: 200px;"></div>
                             </div>
                             <div class="form-row" style="padding: 5px;">
                                 <div class="col"><label>Devendo o(a) mesmo(a):</label>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Retornar as atividades normais</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Permanecer em repouso&nbsp;</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7" name="repouso" value="Retornar as atividades normais">
+                                        <label class="form-check-label" for="formCheck-7">Retornar as atividades normais</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6" name="repouso" value="Permanecer em repouso">
+                                        <label class="form-check-label" for="formCheck-6">Permanecer em repouso&nbsp;</label></div>
                                 </div>
-                            </div><input class="form-control form-control-sm" type="text" name="repouso" placeholder="Dias para Repouso" style="width: 200px;">
+                            </div><input class="form-control form-control-sm" type="text" name="dias" placeholder="Dias para Repouso" style="width: 200px;">
                             <div class="form-row" style="padding: 5px;">
-                                <div class="col"><button class="btn btn-primary" type="button">Avançar</button></div>
+                                <div class="col"><button class="btn btn-primary" type="submit">Avançar</button></div>
                             </div>
                         </div>
                     </form>

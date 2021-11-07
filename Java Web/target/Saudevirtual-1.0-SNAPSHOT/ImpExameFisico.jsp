@@ -1,3 +1,4 @@
+<%@page import="dominion.FichaIdentificacao"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="dominion.QuestExame2"%>
 <%@page import="dominion.QuestExame"%>
@@ -32,11 +33,13 @@
 <%      
     QuestExame exame;
     QuestExame2 exame2;
+    FichaIdentificacao ficha;
     HttpSession sessao = request.getSession(); 
      
     
     exame = (QuestExame)sessao.getAttribute("EXAME");
     exame2 = (QuestExame2)sessao.getAttribute("EXAME2");
+    ficha = (FichaIdentificacao) sessao.getAttribute("FICHA");
     
     if(exame == null || exame2 == null){
     
@@ -45,7 +48,7 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Exame Físico.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/questionario3.html");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
         
         try {
             rd.forward(request, response);
@@ -69,73 +72,77 @@
                     <form>
                         <div class="form-group">
                             <div class="form-row">
-                                <div class="col"><label style="font-weight: bold;">Paciente:&nbsp;</label><label>nome</label></div>
-                                <div class="col"><label style="font-weight: bold;">CPF:&nbsp;</label><label>CPFpaciente</label></div>
+                                <div class="col"><label style="font-weight: bold;">Paciente:&nbsp;</label><label><%= ficha.getNome() %></label></div>
+                                <div class="col"><label style="font-weight: bold;">CPF:&nbsp;</label><label><%= ficha.getCpf() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Lábios:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Mucosa Jugal:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Lábios:&nbsp;&nbsp;</label><label><%=exame.getLabio() %></label></div>
+                                <div class="col"><label>Mucosa Jugal:&nbsp;&nbsp;</label><label><%=exame.getMucosa() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Língua:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Soalho da boca:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Língua:&nbsp;&nbsp;</label><label><%=exame.getLingua() %></label></div>
+                                <div class="col"><label>Soalho da boca:&nbsp;&nbsp;</label><label><%=exame.getBoca() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Palato duro:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Garganta:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Palato duro:&nbsp;&nbsp;</label><label><%=exame.getPalato() %></label></div>
+                                <div class="col"><label>Garganta:&nbsp;&nbsp;</label><label><%=exame.getGarganta() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Palato mole:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Mucosa Alveolar:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Palato mole:&nbsp;&nbsp;</label><label><%=exame.getPalato_mole() %></label></div>
+                                <div class="col"><label>Mucosa Alveolar:&nbsp;&nbsp;</label><label><%=exame.getAlveolar() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Gengivas:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Glândulas Salivares:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Gengivas:&nbsp;&nbsp;</label><label><%=exame.getGengiva() %></label></div>
+                                <div class="col"><label>Glândulas Salivares:&nbsp;&nbsp;</label><label><%=exame.getGlandula() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Linfonodos:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>ATM:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Linfonodos:&nbsp;&nbsp;</label><label><%=exame.getLinfonodos() %></label></div>
+                                <div class="col"><label>ATM:&nbsp;&nbsp;</label><label><%=exame.getAtm() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Músculos Mastigadores:&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Oclusão:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Músculos Mastigadores:&nbsp;&nbsp;</label><label><%=exame.getMusculo() %></label></div>
+                                <div class="col"><label>Oclusão:&nbsp;&nbsp;</label><label><%=exame.getOclusao() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Alterações encontradas:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Alterações encontradas:&nbsp;&nbsp;</label><label><%=exame2.getAlteracao() %></label></div>
                             </div>
                             <div class="form-row">
                                 <div class="col"><label class="col-form-label">PRESSÃO ARTERIAL:</label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Máxima:&nbsp;</label><label>Label</label><label>&nbsp;mmHG</label></div>
+                                <div class="col"><label>Máxima:&nbsp;</label><label><%=exame2.getPressaomin() %></label><label>&nbsp;mmHG</label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Mínima:&nbsp;&nbsp;</label><label>Label</label><label>&nbsp;mmHG</label></div>
+                                <div class="col"><label>Mínima:&nbsp;&nbsp;</label><label><%=exame2.getPressaomax() %></label><label>&nbsp;mmHG</label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Diagnóstico presuntivo:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Diagnóstico presuntivo:&nbsp;&nbsp;</label><label><%=exame2.getDiagpresuntivo() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Exames complementares:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Exames complementares:&nbsp;&nbsp;</label><label><%=exame2.getExamecompl() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Diagnóstico definitivo:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Diagnóstico definitivo:&nbsp;&nbsp;</label><label><%=exame2.getDiagdef() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Tratamento/Proservação:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Tratamento/Proservação:&nbsp;&nbsp;</label><label><%=exame2.getTratamento() %></label></div>
                             </div>
                             <div class="form-row">
-                                <div class="col"><label>Plano de Tratamento:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Plano de Tratamento:&nbsp;&nbsp;</label><label><%=exame2.getPlanotrat() %></label></div>
                             </div>
+                            <% if (exame2.getAtendimentourg() != null) { %>
                             <div class="form-row">
                                 <div class="col"><label class="col-form-label">Atendimento de Urgência (Estágio Sup. em Clínica Odontológica Integrada – URGÊNCIA)</label></div>
                             </div>
+                            <%}%>
                             <div class="form-row">
-                                <div class="col"><label>Medicação:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Medicação:&nbsp;&nbsp;</label><label><%=exame2.getMedicacao() %></label></div>
                             </div>
+                            <% if (exame2.getRemedios() != null ) { %>
                             <div class="form-row">
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= exame2.getRemedios() %></label></div>
                             </div>
+                            <%}%>
                             <div class="form-row" style="margin-top: 12px;margin-bottom: 0px;">
                                 <div class="col"><label class="col-form-label">______________________________________</label></div>
                                 <div class="col"><label class="col-form-label">______________________________________</label></div>

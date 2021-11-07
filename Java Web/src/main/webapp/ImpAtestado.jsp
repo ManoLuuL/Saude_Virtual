@@ -1,8 +1,9 @@
+<%@page import="dominion.FichaIdentificacao"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="dominion.Atestado"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -31,11 +32,12 @@
 
 <%      
     Atestado atestado;
+    FichaIdentificacao ficha;
     HttpSession sessao = request.getSession(); 
      
     
     atestado = (Atestado)sessao.getAttribute("ATESTADO");
-    
+    ficha = (FichaIdentificacao) sessao.getAttribute("FICHA");
     
     if(atestado == null){
     
@@ -44,7 +46,7 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Atestado.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/atestado.jsp");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
         
         try {
             rd.forward(request, response);
@@ -52,6 +54,8 @@
             e.printStackTrace();
         } 
     }
+    
+    
     %> 
 
 <body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
@@ -64,49 +68,55 @@
         </div>
         <div class="container">
             <div class="row">
+                <div class="col"><label>Atestado para fim especifico de:&nbsp;<br></label>
+                    <label><%
+                                        String[] durante_anos = {"Justificativa de falta ao trabalho", "Dispensa de atividade escolares", 
+                                            "Dispensa de atividades físicas, desportivas, judiciais ou militares", "Justificativa de comparecimento",
+                                            "Justificativa de comparecimento, acompanhando o(a) filho(a), menor ou incapaz, na data de hoje."};
+                                        
+                                        for (int i = 0; i < atestado.getTipo().length; i++) {
+                                        if (atestado.getTipo()[i])
+                                        out.print(durante_anos[i] + " ");
+                                }
+                                    %></label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label>A pedido do(a) interessado(a)&nbsp;</label><label><%= ficha.getNome() %></label><label>&nbsp;, portador(a) do RG&nbsp;</label><label><%= ficha.getRg() %></label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label class="col-form-label">que esteve sob tratamento odontológico na clinica.</label></div>
+            </div>
+            <div class="row">
+                <div class="col"><label>No período das&nbsp;</label><label><%=atestado.getPeriodoini() %></label><label>&nbsp; ás&nbsp;&nbsp;</label><label><%=atestado.getPeriodofinal() %></label><label>&nbsp; horas, do dia&nbsp;</label><label id="date">Label</label></div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col"><label>Devendo o(a) mesmo(a):&nbsp;</label><label><%=atestado.getRepouso() %></label>
+                    <% if (atestado.getDias() != null) { %>
+                        <label><%=atestado.getDias() %></label><label>&nbsp;dias</label>
+                   <%}%>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 12px;margin-bottom: 12px;">
+                <div class="col"><label>Bauru,&nbsp;</label><label id="date2">Label</label></div>
+            </div>
+            <div class="row">
                 <div class="col">
-                    <div class="form-group">
-                        <form>
-                            <div class="form-row">
-                                <div class="col"><label>Atestado para fim especifico de:&nbsp;<br></label><label>Label</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label>A pedido do(a) interessado(a)&nbsp;</label><label>Label</label><label>&nbsp;, portador(a) do RG&nbsp;</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label class="col-form-label">que esteve sob tratamento odontológico na clinica.</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label>No período das&nbsp;</label><label>Label</label><label>&nbsp; ás&nbsp;&nbsp;</label><label>Label</label><label>&nbsp; horas, do dia&nbsp;</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row" style="padding: 5px;">
-                                <div class="col"><label>Devendo o(a) mesmo(a):&nbsp;</label><label>Label</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row" style="margin-top: 12px;margin-bottom: 12px;">
-                                <div class="col"><label>Bauru,&nbsp;</label><label>Label</label></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="form-row" style="margin-top: 12px;margin-bottom: 0px;">
-                                        <div class="col"><label class="col-form-label">______________________________________</label></div>
-                                        <div class="col"><label class="col-form-label">______________________________________</label></div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col"><label class="col-form-label">Assinatura do Paciente/Responsável</label></div>
-                                        <div class="col"><label class="col-form-label">Ass. Do (a) professor(a) com carimbo ou nome completo e CRO</label></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col"><label class="col-form-label">Rua Ir. Arminda 10-50 –Jd Brasil – 17011-160 Bauru- SP – Tel - (14) 2107-7269 / 2107- 7364<br></label></div>
-                            </div>
-                            <div class="form-row" style="padding: 5px;">
-                                <div class="col"><a class="btn btn-primary" role="button" href="Impressao.html">Voltar</a></div>
-                        <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
-                            </div>
-                        </form>
+                    <div class="row" style="margin-top: 12px;margin-bottom: 0px;">
+                        <div class="col"><label class="col-form-label">______________________________________</label></div>
+                        <div class="col"><label class="col-form-label">______________________________________</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label">Assinatura do Paciente/Responsável</label></div>
+                        <div class="col"><label class="col-form-label">Ass. Do (a) professor(a) com carimbo ou nome completo e CRO</label></div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col"><label class="col-form-label">Rua Ir. Arminda 10-50 –Jd Brasil – 17011-160 Bauru- SP – Tel - (14) 2107-7269 / 2107- 7364<br></label></div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col"><button class="btn btn-primary" type="button" href="Impressao.html">Voltar</button></div>
+                <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
             </div>
         </div>
     </section>
@@ -116,6 +126,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
     <script src="assets/js/untitled.js"></script>
+    <script>var currentDate  = new Date(),
+    currentDay   = currentDate.getDate() < 10 
+                 ? '0' + currentDate.getDate() 
+                 : currentDate.getDate(),
+    currentMonth = currentDate.getMonth() < 9 
+                 ? '0' + (currentDate.getMonth() + 1) 
+                 : (currentDate.getMonth() + 1);
+
+document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+document.getElementById("date2").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();</script>
 </body>
 
 </html>
