@@ -10,6 +10,7 @@ br\com\DTO\UsuarioDTO.class
 dominion\Receituario.class
 controles\ServAtestado.class
 com\mycompany\saudevirtual\resources\JavaEE8Resource.class
+controles\aut.class
 controles\Servidentifica.class
 util\Graduacao.class
 util\ManipulaData.class
@@ -17,7 +18,6 @@ dominion\QuestInf.class
 dominion\FichaIdentificacao.class
 controles\ServQuest1.class
 util\validacpf.class
-controles\Autenticador.class
 controles\ServQuest3.class
 controles\ServReceituario.class
 controles\AtestadoS.class

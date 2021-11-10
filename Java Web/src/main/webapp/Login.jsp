@@ -43,7 +43,7 @@
         </div>
     </nav>
     <section class="login-dark" style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
-        <form action= "Login.jsp" method="post" style="background: var(--light);color: rgb(255, 255, 255);">
+        <form action= "aut" method="post" style="background: var(--light);color: rgb(255, 255, 255);">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="far fa-user-circle" style="color: var(--secondary);"></i></div>
             <div class="form-group"><input class="form-control" type="text" name="usuario" placeholder="Usuário"></div>

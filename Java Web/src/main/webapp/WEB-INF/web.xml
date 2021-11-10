@@ -9,10 +9,6 @@
         <servlet-class>controles.ServQuest1</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Autenticador</servlet-name>
-        <servlet-class>controles.Autenticador</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ServQuest2</servlet-name>
         <servlet-class>controles.ServQuest2</servlet-class>
     </servlet>
@@ -32,6 +28,10 @@
         <servlet-name>AtestadoS</servlet-name>
         <servlet-class>controles.AtestadoS</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>aut</servlet-name>
+        <servlet-class>controles.aut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -39,10 +39,6 @@
     <servlet-mapping>
         <servlet-name>ServQuest1</servlet-name>
         <url-pattern>/ServQuest1</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Autenticador</servlet-name>
-        <url-pattern>/Autenticador</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServQuest2</servlet-name>
@@ -63,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>AtestadoS</servlet-name>
         <url-pattern>/AtestadoS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>aut</servlet-name>
+        <url-pattern>/aut</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -73,86 +73,86 @@
                                 <div class="col"><label class="col-form-label">Queixa:&nbsp;</label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getQueixa() %></label></div>
                             </div>
                             <div class="row">
                                 <div class="col"><label class="col-form-label">Historia da doença atual:</label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getHitdoenca() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">1- Já teve hemorragia?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getHemorragia() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">2- Sofre(u) de alergia?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getAlergia() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">3-&nbsp;&nbsp;Teve reumatismo infeccioso?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getInfeccioso() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">4-&nbsp;&nbsp;Sofre(u) de distúrbio cardiovascular?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getCardiovascular() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">5-&nbsp;&nbsp;Sofre(u) de gastrite?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getGastrite() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">6-&nbsp;&nbsp;É diabético ou tem familiares diabéticos? </label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getDiabetico() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">7-&nbsp;&nbsp;Já desmaiou alguma vez?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getDesmaiou() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">8-&nbsp;&nbsp;Está sob tratamento médico?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getTratamento_med() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">9-&nbsp;&nbsp;Está tomando algum medicamento?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getToma_medc() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">10-&nbsp;&nbsp;Esteve doente ou foi operado nos últimos 5 anos?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getDoente_5() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">11-&nbsp;&nbsp;Tem hábitos, vícios ou manias?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getHabitos() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">12-&nbsp;&nbsp;Tem ansiedade/depressão?</label></div>
-                                <div class="col"><label class="col-form-label">Label</label></div>
+                                <div class="col"><label class="col-form-label"><%= saude.getAnsie_depre() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
                                 <div class="col"><label class="col-form-label">13-&nbsp;&nbsp;Você e/ou algum familiar&nbsp;teve algumas dessas doenças:</label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col"><label>Tuberculose&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Sífilis&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Tuberculose&nbsp;&nbsp;</label><label><%= saude2.getTuberculose() %></label></div>
+                                <div class="col"><label>Sífilis&nbsp;&nbsp;</label><label><%= saude2.getSifilis() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col offset-md-0"><label>Sarampo&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Caxumba&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col offset-md-0"><label>Sarampo&nbsp;&nbsp;</label><label><%= saude2.getSarampo() %></label></div>
+                                <div class="col"><label>Caxumba&nbsp;&nbsp;</label><label><%= saude2.getCaxumba() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col"><label>Hepatite A, B, C&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Varicela&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>Hepatite A, B, C&nbsp;&nbsp;</label><label><%= saude2.getHepatite() %></label></div>
+                                <div class="col"><label>Varicela&nbsp;&nbsp;</label><label><%= saude2.getVaricela() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col"><label>SIDA/AIDS&nbsp;&nbsp;</label><label>Label</label></div>
-                                <div class="col"><label>Outras:&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>SIDA/AIDS&nbsp;&nbsp;</label><label><%= saude2.getAids() %></label></div>
+                                <div class="col"><label>Outras:&nbsp;&nbsp;</label><label><%= saude2.getOutra_doenca() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col"><label>14- É Fumante?&nbsp;&nbsp;</label><label>Label</label></div>
+                                <div class="col"><label>14- É Fumante?&nbsp;&nbsp;</label><label><%= saude2.getFumanete() %></label></div>
                             </div>
                             <div class="row" style="padding: 3PX;">
-                                <div class="col"><label>Frequência:&nbsp;</label><label>Label</label><label>&nbsp;/dia<br></label></div>
+                                <div class="col"><label>Frequência:&nbsp;</label><label><%= saude2.getFrequencia() %></label><label>&nbsp;/dia<br></label></div>
                             </div>
                             <div class="row" style="margin-top: 12px;margin-bottom: 0px;">
                                 <div class="col"><label class="col-form-label">______________________________________</label></div>

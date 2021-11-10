@@ -12,23 +12,23 @@
     <body>
         <%
             try {
-                    UsuarioDTO objUsuarioDTO = new UsuarioDTO();
+                UsuarioDTO objUsuarioDTO = new UsuarioDTO();
                 objUsuarioDTO.setNome_usuario(request.getParameter("Nome"));
                 objUsuarioDTO.setCpf_cro(request.getParameter("CPFCRO"));
                 objUsuarioDTO.setUsuario(request.getParameter("usuarioP"));
                 objUsuarioDTO.setSenha_usuario(request.getParameter("senha"));
                 objUsuarioDTO.setTipo_usuario(request.getParameter("TipoUsu"));
-            
+
                 UsuarioDAO objUsuarioDAO = new UsuarioDAO();
                 objUsuarioDAO.CadastrarUsuario(objUsuarioDTO);
-            
-            
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            
+                RequestDispatcher rd = request.getRequestDispatcher("/indexdentista.html");
+                rd.forward(request, response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         %>
-        
-        
+
+
     </body>
 </html>
