@@ -33,7 +33,7 @@ public class UsuarioDAO {
 
     public String validarlogin(UsuarioDTO objUsuarioDTO) throws ClassNotFoundException {
 
-        String sql = "SELECT nome_usuario, senha_usuario, tipo_usuario FROM usuarios where nome_usuario = ? and senha_usuario = ?";
+        String sql = "SELECT nome_usuario, senha_usuario, tipo_usuario FROM usuarios where usuario = ? and senha_usuario = ?";
         con = new ConexaoDAO().conexaoBD();
 
         String pag = null;
@@ -56,7 +56,7 @@ public class UsuarioDAO {
                 }
 
                 if (tipo.equals("Paciente")) {
-                    pag = "2";
+                    pag = "Paciente";
                     System.out.println(tipo);
                 }
 

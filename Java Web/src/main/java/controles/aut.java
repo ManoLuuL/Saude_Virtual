@@ -124,7 +124,7 @@ public class aut extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    protected void validalogin(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException {
+    protected void validalogin(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, IOException {
        
         UsuarioDAO usu = new UsuarioDAO();
         String logon = usu.validarlogin(usuario);
@@ -134,6 +134,7 @@ public class aut extends HttpServlet {
 
             RequestDispatcher rd = request.getRequestDispatcher("/index.html");
             try {
+                
                 rd.forward(request, response);
             } catch (IOException | ServletException e) {
                 
@@ -154,7 +155,7 @@ public class aut extends HttpServlet {
         
         if ("Paciente".equals(logon)) {
 
-            RequestDispatcher rd = request.getRequestDispatcher("/indexpaciente.html");
+            RequestDispatcher rd = request.getRequestDispatcher("/IndexPaciente.jsp");
             try {
                 rd.forward(request, response);
             } catch (IOException | ServletException e) {
