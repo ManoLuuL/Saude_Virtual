@@ -1,17 +1,10 @@
 
+<%@page import="dominion.Consulta"%>
 <%@page import="br.com.DTO.UsuarioDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <%
-UsuarioDTO usuario;
-HttpSession sessao = request.getSession();
-
-usuario = (UsuarioDTO)sessao.getAttribute("usuario");
-
-%>
-    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -37,9 +30,18 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
     <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
 
+<%
+UsuarioDTO usuario;
+Consulta consu;
+HttpSession sessao = request.getSession();
+
+usuario = (UsuarioDTO)sessao.getAttribute("usuario");
+consu = (Consulta)sessao.getAttribute("Consulta");
+%>
+
 <body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
-        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="IndexPaciente.jsp" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="indexpaciente.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link active" href="IndexPaciente.jsp" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
@@ -47,7 +49,7 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
                     </li>
-                </ul><span class="navbar-text actions"></span><label class="text-uppercase border rounded border-white mr-auto"><label>Bem Vindo Usuario:&nbsp;</label><%= usuario.getUsuario() %></label>
+                </ul><span class="navbar-text actions"> </span><label class="text-uppercase border rounded border-white mr-auto"><label>Bem Vindo Usuario:&nbsp;</label><%= usuario.getUsuario() %>
             </div>
         </div>
     </nav>
@@ -60,11 +62,30 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
                         <div class="border rounded box"><i class="far fa-id-badge icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Identificacao.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>FICHA IDENTIFICAÇÃO</strong><br></a></div>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Termoderesponsabilidade.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
+                        <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="#" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-4 item">
+                        <div class="border rounded box"><i class="far fa-handshake icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Consulta.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>MARCAR CONSULTA</strong><br></a></div>
                     </div>
                 </div>
             </div>
         </section>
+        <% if(consu != null) {%>
+        <section class="features-clean" style="background: rgba(255,255,255,0.32);padding-top: 10px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col"><label class="col-form-label"><strong>CONSULTAS:&nbsp;</strong></label></div>
+                </div>
+                <div class="row">
+                    <div class="col"><label>Data:&nbsp;</label><label><%= consu.getData() %></label></div>
+                    <div class="col"><label>Doutor:&nbsp;</label><label><%= consu.getDoutor() %></label></div>
+                </div>
+                <div class="row">
+                    <div class="col"><label>Finalidade:&nbsp;</label><label><%= consu.getFinalidade() %></label></div>
+                </div>
+            </div>
+        </section>
+                           <% }%>
         <section class="features-clean" style="background: rgba(255,255,255,0.32);padding-top: 10px;">
             <div class="container">
                 <h4 class="text-center" style="margin-bottom: 17px;margin-top: 17px;padding-bottom: 10px;"><strong>Serviços prestados pelos nossos Profissionais:</strong><br></h4>

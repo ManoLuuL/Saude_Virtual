@@ -32,6 +32,10 @@
         <servlet-name>aut</servlet-name>
         <servlet-class>controles.aut</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServConsulta</servlet-name>
+        <servlet-class>controles.ServConsulta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>aut</servlet-name>
         <url-pattern>/aut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServConsulta</servlet-name>
+        <url-pattern>/ServConsulta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

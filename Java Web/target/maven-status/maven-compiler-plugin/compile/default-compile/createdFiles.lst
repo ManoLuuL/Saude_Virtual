@@ -1,8 +1,11 @@
 dominion\Atestado.class
+dominion\Consulta.class
 dominion\QuestExame2.class
+util\Doutor.class
 controles\ServQuest2.class
 dominion\QuestSaude2.class
 br\com\DAO\UsuarioDAO.class
+controles\ServConsulta.class
 util\Escolaridade.class
 br\com\DAO\ConexaoDAO.class
 dominion\QuestExame.class
