@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 public class ServAtestado extends HttpServlet {
 
-    String destino = "/Formularios.html";
+    String destino = "/Formularios.jsp";
     Atestado atestado;
     String e;
      /**

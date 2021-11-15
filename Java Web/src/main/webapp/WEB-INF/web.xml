@@ -36,6 +36,14 @@
         <servlet-name>ServConsulta</servlet-name>
         <servlet-class>controles.ServConsulta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServPronto</servlet-name>
+        <servlet-class>controles.ServPronto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServInt</servlet-name>
+        <servlet-class>controles.ServInt</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servidentifica</servlet-name>
         <url-pattern>/Servidentifica</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>ServConsulta</servlet-name>
         <url-pattern>/ServConsulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServPronto</servlet-name>
+        <url-pattern>/ServPronto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServInt</servlet-name>
+        <url-pattern>/ServInt</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

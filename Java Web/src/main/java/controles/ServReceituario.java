@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 public class ServReceituario extends HttpServlet {
 
-    String destino = "/Formularios.html";
+    String destino = "/Formularios.jsp";
     Receituario receituario;
     
     private void recebereceituario(HttpServletRequest request){

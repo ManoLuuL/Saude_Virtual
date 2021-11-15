@@ -16,7 +16,7 @@ public class ServQuest3 extends HttpServlet {
 
     QuestExame exame;
     QuestExame2 exame2;
-    String destino = "/Formularios.html";
+    String destino = "/Formularios.jsp";
     
     private void receberexame(HttpServletRequest request){
     

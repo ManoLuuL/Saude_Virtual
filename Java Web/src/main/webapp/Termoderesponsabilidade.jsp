@@ -98,7 +98,7 @@
                 <div class="col"><label class="col-form-label">Assinatura do Paciente/Responsável</label></div>
             </div>
             <div class="row" style="padding: 5px;">
-                <div class="col"><button class="btn btn-primary" type="button">Voltar</button></div>
+                <div class="col"><button class="btn btn-primary" type="button" onclick="window.history.back()">Voltar</button></div>
                 <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
             </div>
         </div>

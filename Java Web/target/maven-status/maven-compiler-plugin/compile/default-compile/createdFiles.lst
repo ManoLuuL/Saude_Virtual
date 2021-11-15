@@ -1,4 +1,5 @@
 dominion\Atestado.class
+controles\ServInt.class
 dominion\Consulta.class
 dominion\QuestExame2.class
 util\Doutor.class
@@ -12,6 +13,7 @@ dominion\QuestExame.class
 br\com\DTO\UsuarioDTO.class
 dominion\Receituario.class
 controles\ServAtestado.class
+controles\ServPronto.class
 com\mycompany\saudevirtual\resources\JavaEE8Resource.class
 controles\aut.class
 controles\Servidentifica.class
@@ -28,4 +30,6 @@ dominion\QuestInf2.class
 util\Sexo.class
 dominion\FcIdFiliacao.class
 dominion\QuestSaude.class
+dominion\Encaminha.class
 com\mycompany\saudevirtual\JAXRSConfiguration.class
+dominion\Prontuario.class

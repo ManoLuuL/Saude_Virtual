@@ -41,7 +41,7 @@ consu = (Consulta)sessao.getAttribute("Consulta");
 
 <body style="background: url(&quot;assets/img/padrao-sem-emenda-colorido-pastel-para-cuidados-dentarios_1284-44406.jpg&quot;);">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: #222222;">
-        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="indexpaciente.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="IndexPaciente.jsp" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link active" href="IndexPaciente.jsp" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
@@ -62,7 +62,7 @@ consu = (Consulta)sessao.getAttribute("Consulta");
                         <div class="border rounded box"><i class="far fa-id-badge icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Identificacao.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>FICHA IDENTIFICAÇÃO</strong><br></a></div>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
-                        <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="#" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
+                        <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="PreTermos.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-4 item">
                         <div class="border rounded box"><i class="far fa-handshake icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Consulta.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>MARCAR CONSULTA</strong><br></a></div>
@@ -140,21 +140,21 @@ consu = (Consulta)sessao.getAttribute("Consulta");
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src="assets/img/1630635867871.jpg">
                         <h3 class="name">Lucas Develis</h3>
-                        <p class="title">Musician</p>
+                        <p class="title">Criador de Conteúdo</p>
                         <p class="description">Muito obrigado Dr. Vitor Molina por seu excelente atendimento e profissionalismo. Frequentei a clínica durante um ano e só tenho elogios a fazer. O espaço é ótimo e os profissionais extremamente competentes. Estou muito satisfeito e recomendo!<br></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src="assets/img/1618767954276.jpg">
                         <h3 class="name">Gabriel Mattos</h3>
-                        <p class="title">Artist</p>
+                        <p class="title">Desenvolvedor de Automação</p>
                         <p class="description">A dedicação e o profissionalismo do Dr. Vitor em satisfazer plenamente os anseios de seus pacientes são de fazer inveja a qualquer um. Estou completamente realizada com todo o tratamento que tive desde a minha primeira consulta. Ah se todos os profissionais de todas as outras áreas escutassem os desejos de seus pacientes... Deixo aqui, com sinceridade, o meu muito obrigado por tudo.<br></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src="assets/img/1591815195805.jpg">
                         <h3 class="name">Paulo Leonardo</h3>
-                        <p class="title">Stylist</p>
+                        <p class="title">Desenvolvedor de API's</p>
                         <p class="description">Dr Luis, gostaria de agradecer o tratamento que tive em sua clínica desde a minha primeira consulta. O sr me passou segurança desde o primeiro momento. E isso tirou o medo que sempre tive de dentista. Um sorriso bonito realmente faz toda a diferença em nossas vidas. Estou muito feliz. Muito obrigado!<br></p>
                     </div>
                 </div>

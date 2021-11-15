@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
 public class ServQuest1 extends HttpServlet {
 
     QuestSaude questionario;
-    String destino = "/Formularios.html";
+    String destino = "/Formularios.jsp";
     QuestSaude2 questionario2;
     
     /**

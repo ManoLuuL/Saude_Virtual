@@ -46,7 +46,7 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Formulario de Saúde.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.jsp");
 
         try {
             rd.forward(request, response);
@@ -163,7 +163,7 @@
                                 <div class="col"><label class="col-form-label">Ass. Do (a) professor(a) com carimbo ou nome completo e CRO</label></div>
                             </div>
                             <div class="row" style="padding: 5px;">
-                                <div class="col"><a class="btn btn-primary" role="button" href="Impressao.html">Voltar</a></div>
+                                <div class="col"><button class="btn btn-primary" type="button" onclick="window.history.back()">Voltar</button></div>
                                 <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
                             </div>
         </div>

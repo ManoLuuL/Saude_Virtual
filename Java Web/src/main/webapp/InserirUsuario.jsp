@@ -21,7 +21,7 @@
 
                 UsuarioDAO objUsuarioDAO = new UsuarioDAO();
                 objUsuarioDAO.CadastrarUsuario(objUsuarioDTO);
-                RequestDispatcher rd = request.getRequestDispatcher("/indexdentista.html");
+                RequestDispatcher rd = request.getRequestDispatcher("/IndexDentista.jsp");
                 rd.forward(request, response);
             } catch (Exception e) {
                 e.printStackTrace();

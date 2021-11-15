@@ -46,7 +46,7 @@
         pw.println("<script type=\"text/javascript\">");
         pw.println("alert('Primeiro, preencha o Atestado.');");
         pw.println("</script>");
-        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.html");
+        RequestDispatcher rd=request.getRequestDispatcher("/Formularios.jsp");
         
         try {
             rd.forward(request, response);
@@ -115,7 +115,7 @@
                 <div class="col"><label class="col-form-label">Rua Ir. Arminda 10-50 –Jd Brasil – 17011-160 Bauru- SP – Tel - (14) 2107-7269 / 2107- 7364<br></label></div>
             </div>
             <div class="row" style="padding: 5px;">
-                <div class="col"><button class="btn btn-primary" type="button" href="Impressao.html">Voltar</button></div>
+                <div class="col"><button class="btn btn-primary" type="button" onclick="window.history.back()">Voltar</button></div>
                 <div class="col"><button class="btn btn-primary" type="button" onClick="window.print()">Imprimir</button></div>
             </div>
         </div>

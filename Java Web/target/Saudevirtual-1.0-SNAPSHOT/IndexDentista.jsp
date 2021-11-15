@@ -40,7 +40,7 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
         <div class="container"><img src="assets/img/Icon.png" style="width: 60px;height: 60px;"><a class="navbar-brand" href="indexdentista.html" style="font-family: Montserrat, sans-serif;margin-left: 14px;">Saúde Digital</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link active" href="indexdentista.html" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="IndexDentista.jsp" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Página Inicial</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Contato</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(0,0,0);font-size: 15px;font-family: Alata, sans-serif;">Sobre</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
@@ -56,16 +56,16 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
             </div>
             <div class="row justify-content-center features">
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="far fa-user-circle icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="cadastro.html" style="font-size: 18px;color: var(--gray-dark);margin: 0px 0px 8px;height: 21px;width: 210px;"><br><strong>CADASTRAR PACIENTE</strong><br></a></div>
+                    <div class="border rounded box"><i class="far fa-user-circle icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="cadastro.jsp" style="font-size: 18px;color: var(--gray-dark);margin: 0px 0px 8px;height: 21px;width: 210px;"><br><strong>CADASTRAR PACIENTE</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="far fa-id-badge icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Identificacao.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>FICHA IDENTIFICAÇÃO</strong><br></a></div>
+                    <div class="border rounded box"><i class="far fa-id-badge icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="Identificacao2.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;font-size: 18px;color: var(--gray-dark);"><br><strong>FICHA IDENTIFICAÇÃO</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="border rounded box"><i class="fas fa-file-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="#" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>TERMO DE ESCLARECIMENTO</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="fa fa-list-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="questionario.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>QUESTIONÁRIO DE SAÚDE</strong><br></a></div>
+                    <div class="border rounded box"><i class="fa fa-list-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="questionario.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>QUESTIONÁRIO DE SAÚDE</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="border rounded box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-mood-kid icon" style="color: rgb(33,132,248);">
@@ -75,13 +75,13 @@ usuario = (UsuarioDTO)sessao.getAttribute("usuario");
                             <line x1="15" y1="10" x2="15.01" y2="10"></line>
                             <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path>
                             <path d="M12 3a2 2 0 0 0 0 4"></path>
-                        </svg><a class="learn-more" href="questionario2.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>QUESTIONÁRIO INFANTIL</strong><br></a></div>
+                        </svg><a class="learn-more" href="questionario2.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>QUESTIONÁRIO INFANTIL</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="fa fa-list-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="questionario3.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>EXAME FÍSICO</strong><br></a></div>
+                    <div class="border rounded box"><i class="fa fa-list-alt icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="questionario3.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>EXAME FÍSICO</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="border rounded box"><i class="far fa-clipboard icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="prontuario.html" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>PRONTUÁRIO</strong><br></a></div>
+                    <div class="border rounded box"><i class="far fa-clipboard icon" style="color: rgb(33,132,248);"></i><a class="learn-more" href="ProntuarioP.jsp" style="width: 210px;height: 21px;margin: 0px 0px 8px;color: var(--gray-dark);font-size: 18px;"><br><strong>PRONTUÁRIO</strong><br></a></div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="border rounded box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-folder-symlink icon" style="color: rgb(33,132,248);">
